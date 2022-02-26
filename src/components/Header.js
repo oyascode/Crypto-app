@@ -11,6 +11,8 @@ import { makeStyles } from '@material-ui/styles';
 import React from 'react';
 import { useNavigate} from 'react-router-dom'
 import { CryptoState } from '../CryptoContext';
+import AuthModal from './Authentiction/AuthModal';
+import UserSidebar from './Authentiction/UserSidebar';
 
 
 const useStyles = makeStyles(() => ({
@@ -32,7 +34,7 @@ const Header = () => {
   const classes = useStyles();
   const navigate = useNavigate(); 
 
-  const { currency, setCurrency} = CryptoState()
+  const { currency, setCurrency, user} = CryptoState()
     console.log(currency);
   const darkTheme = createTheme({
     palette: {
@@ -65,6 +67,7 @@ const Header = () => {
               <MenuItem value={"CAD"}>CAD</MenuItem>
               <MenuItem value={"INR"}>INR</MenuItem>
             </Select>
+            { user ? <UserSidebar /> : <AuthModal />}
           </Toolbar>
         </Container>
       </AppBar>

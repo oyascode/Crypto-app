@@ -5,6 +5,7 @@ import Homepage from './Pages/Homepage';
 import Coinpage from './Pages/Coinpage';
 import { makeStyles } from '@material-ui/core';
 import ErrorPage from './Pages/ErrorPage';
+import Alert from './components/Alert';
 
 const useStyles = makeStyles(() => ({
   App: {
@@ -26,6 +27,7 @@ function App() {
           <Route path='*' element={<ErrorPage />} />
         </Routes>
       </div>
+      <Alert />
     </Router>
   );
 }

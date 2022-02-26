@@ -1,4 +1,4 @@
-import { LinearProgress, makeStyles, Typography } from '@material-ui/core';
+import { Button, LinearProgress, makeStyles, Typography } from '@material-ui/core';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -57,7 +57,7 @@ const Coinpage = () => {
   const [coin, setCoin] = useState('');
 
   const classes = useStyles();
-  const {currency, symbol} = CryptoState();
+  const {currency, symbol, user} = CryptoState();
 
   const fetchCoin = async () => {
     const { data } = await axios.get(SingleCoin(id));
@@ -142,6 +142,18 @@ const Coinpage = () => {
               M
             </Typography>
           </span>
+            { user && (
+              <Button
+                variant='contained'
+                style={{
+                  width: "100%",
+                  height: 40,
+                  backgroundColor: "#EEBC1D",
+                }}
+              >
+                Add to Watchlist
+              </Button>
+            )}
         </div>
       </div>
       {/* chart */}
