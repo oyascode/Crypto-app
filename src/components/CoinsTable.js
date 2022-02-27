@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { CoinList } from '../config/api';
-import axios from 'axios';
 import { CryptoState } from '../CryptoContext';
 import { Container, createTheme, LinearProgress, makeStyles, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, ThemeProvider, Typography } from '@material-ui/core';
 import { useNavigate } from 'react-router-dom';

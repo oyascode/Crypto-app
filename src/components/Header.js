@@ -55,7 +55,7 @@ const Header = () => {
             className={classes.title}
             onClick={() => navigate('/')}
             >
-              Crypto Cruncher
+              Crypto Tracker
             </Typography>
             <Select 
             variant="outlined" 
