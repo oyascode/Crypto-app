@@ -25,9 +25,11 @@ const useStyles = makeStyles(() => ({
   title: {
     flex: 1,
     color: "gold",
+    fontSize: "1.5rem",
     fontFamily: "Montserrat",
     fonWeight: "bold",
     cursor: "pointer",
+    textShadow: "1px 1px 2px #ccc"
   }
 }))
 const Header = () => {
@@ -65,7 +67,6 @@ const Header = () => {
             >
               <MenuItem value={"USD"}>USD</MenuItem>
               <MenuItem value={"CAD"}>CAD</MenuItem>
-              <MenuItem value={"INR"}>INR</MenuItem>
             </Select>
             { user ? <UserSidebar /> : <AuthModal />}
           </Toolbar>

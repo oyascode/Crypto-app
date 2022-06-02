@@ -24,11 +24,15 @@ const CryptoContext = ({children}) => {
 
   useEffect(() => {
     onAuthStateChanged(auth, user => {
-      if (user) setUser(user);
-      else setUser(null)
+      if (user) {
+        setUser(user)
+      } else {
+        setUser(null)
+      }
+
+      console.log('user', user);
     })
   }, [])
-  console.log('user', user);
 
   const fetchCoins = async () => {
     setLoading(true)
