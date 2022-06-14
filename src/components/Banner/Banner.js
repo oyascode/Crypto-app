@@ -1,7 +1,7 @@
 import { Container, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import React from 'react';
-import banner from '../../assets/crypto-banner.jpeg'
+import banner from '../../assets/crypt_bg.jpg'
 import Carousel from './Carousel';
 
 
